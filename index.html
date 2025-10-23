@@ -7,8 +7,223 @@
     <title>Shaxrisabiz Qurilish</title>
 
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; } body, html { overflow-x: hidden; } @font-face { font-family: "Kuunari"; src: url(../font/kuunari-bold.woff2) format(woff2); font-display: swap; font-weight: normal; } .date { padding-top: 23px; padding-bottom: 26px; } .date__container { max-width: 390px; margin-left: auto; margin-right: auto; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-left: 10px; padding-right: 10px; } .date__top { border: 2px solid rgba(52, 119, 255, 0.5); border-radius: 50px; width: 100%; max-width: 178px; padding: 5px; margin-bottom: 12px; } .date__top>span { font-size: 13px; font-weight: 500; font-family: sans-serif; line-height: 20px; } .date__title { font-family: Kuunari, sans-serif; font-weight: 900; font-size: 32px; line-height: 35px; text-transform: uppercase; margin-bottom: 12px; } .date__info { border: 2px solid #2EA4FF; background-color: white; border-radius: 10px; padding: 9px 19px; max-width: 334px; margin-bottom: 36px; width: 100%; margin-left: auto; margin-right: auto; display: flex; align-items: center; justify-content: center; } .date__info>p { font-weight: 400; font-size: 16px; line-height: 20px; } .date__subtitle { font-weight: 400; font-size: 22px; line-height: 25px; max-width: 245px; width: 100%; text-align: center; margin-left: auto; margin-right: auto; margin-bottom: 14px; } .date__subtitle>span { color: #FF0000; } .date__registerBtn { margin-top: 15px; font-family: Kuunari, sans-serif; color: white; padding: 19px 26px 18px 27px; font-weight: 700; text-decoration: none; border: none; background-color: #0693FF; box-shadow: 0px 3px 0px 0px #0072CA; font-size: 28px; border-radius: 10px; margin-bottom: 12px; cursor: pointer; line-height: 28px; text-transform: uppercase; } .date__user-box { display: flex; align-items: center; gap: 11px; margin-bottom: 48px; } .date__user-text { font-weight: 700; font-size: 18px; line-height: 15px; } .date__text { font-weight: 400; margin-bottom: 22px; font-size: 26px; line-height: 25px; } .date__timer-box { display: flex; align-items: center; justify-content: center; margin-bottom: 19px; } .date__user-img { max-width: 122px; width: 100%; } .timer { display: flex; gap: var(--gap-between-blocks); align-items: flex-start; } .block { width: 80px; text-align: center; } .value { font-weight: 700; font-size: 35px; line-height: 25px; margin-bottom: 5px; } .label { font-weight: 400; font-size: 24px; line-height: 25px; text-align: center; } @media (max-width:340px) { .date__title { font-size: 28px; line-height: 30px; } .date__info>p { font-size: 15px; line-height: 18px; } .date__info { margin-bottom: 20px; } .date__subtitle { font-size: 20px; } .date__registerBtn { font-size: 25px; padding: 17px 20px 16px 21px; } .date__user-text { font-size: 15.5px; } .date__user-box { margin-bottom: 25px; } .date__user-img { max-width: 100px; } .date__text { font-size: 23px; } .value { font-size: 32px; margin-bottom: 2px; } .label { font-size: 21px; } }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body,
+        html {
+            overflow-x: hidden;
+        }
+
+        .date {
+            padding-top: 23px;
+            padding-bottom: 26px;
+        }
+
+        .date__container {
+            max-width: 390px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .date__top {
+            border: 2px solid rgba(52, 119, 255, 0.5);
+            border-radius: 50px;
+            width: 100%;
+            max-width: 178px;
+            padding: 5px;
+            margin-bottom: 12px;
+        }
+
+        .date__top>span {
+            font-size: 13px;
+            font-weight: 500;
+            font-family: sans-serif;
+            line-height: 20px;
+        }
+
+        .date__title {
+            font-family: Kuunari, sans-serif;
+            font-weight: 900;
+            font-size: 32px;
+            line-height: 35px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .date__info {
+            border: 2px solid #2EA4FF;
+            background-color: white;
+            border-radius: 10px;
+            padding: 9px 19px;
+            max-width: 334px;
+            margin-bottom: 36px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .date__info>p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        .date__subtitle {
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 25px;
+            max-width: 245px;
+            width: 100%;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 14px;
+        }
+
+        .date__subtitle>span {
+            color: #FF0000;
+        }
+
+        .date__registerBtn {
+            margin-top: 15px;
+            font-family: Kuunari, sans-serif;
+            color: white;
+            padding: 19px 26px 18px 27px;
+            font-weight: 700;
+            text-decoration: none;
+            border: none;
+            background-color: #0693FF;
+            box-shadow: 0px 3px 0px 0px #0072CA;
+            font-size: 28px;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            line-height: 28px;
+            text-transform: uppercase;
+        }
+
+        .date__user-box {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            margin-bottom: 48px;
+        }
+
+        .date__user-text {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 15px;
+        }
+
+        .date__text {
+            font-weight: 400;
+            margin-bottom: 22px;
+            font-size: 26px;
+            line-height: 25px;
+        }
+
+        .date__timer-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 19px;
+        }
+
+        .date__user-img {
+            max-width: 122px;
+            width: 100%;
+        }
+
+        .timer {
+            display: flex;
+            gap: var(--gap-between-blocks);
+            align-items: flex-start;
+        }
+
+        .block {
+            width: 80px;
+            text-align: center;
+        }
+
+        .value {
+            font-weight: 700;
+            font-size: 35px;
+            line-height: 25px;
+            margin-bottom: 5px;
+        }
+
+        .label {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 25px;
+            text-align: center;
+        }
+
+        @media (max-width:340px) {
+            .date__title {
+                font-size: 28px;
+                line-height: 30px;
+            }
+
+            .date__info>p {
+                font-size: 15px;
+                line-height: 18px;
+            }
+
+            .date__info {
+                margin-bottom: 20px;
+            }
+
+            .date__subtitle {
+                font-size: 20px;
+            }
+
+            .date__registerBtn {
+                font-size: 25px;
+                padding: 17px 20px 16px 21px;
+            }
+
+            .date__user-text {
+                font-size: 15.5px;
+            }
+
+            .date__user-box {
+                margin-bottom: 25px;
+            }
+
+            .date__user-img {
+                max-width: 100px;
+            }
+
+            .date__text {
+                font-size: 23px;
+            }
+
+            .value {
+                font-size: 32px;
+                margin-bottom: 2px;
+            }
+
+            .label {
+                font-size: 21px;
+            }
+        }
     </style>
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
@@ -45,7 +260,8 @@
             <a href="https://t.me/+OYvptPpX8NQzMzQy" class="date__registerBtn">>> Kanalga qo’shilish << </a>
 
                     <div class="date__user-box">
-                        <img class="date__user-img" src="./images/starts.svg" loading="lazy" decoding="async" alt="start icons">
+                        <img class="date__user-img" src="./images/starts.svg" loading="lazy" decoding="async"
+                            alt="start icons">
                         <p class="date__user-text">6.000+ ishtirokchilar</p>
                     </div>
 
